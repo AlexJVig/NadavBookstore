@@ -27,5 +27,16 @@ namespace NadavBookstore
             else
                 return new List<Book>();
         }
+
+        public static void ExportToCsv(List<Book> books)
+        {
+            using (StreamWriter writer = new StreamWriter("books.csv"))
+            {
+                foreach (Book book in books)
+                {
+                    writer.WriteLine($"{book.BookId},{book.Author},{book.Title},{book.Genre},{book.Price},{book.PublishDate},{book.Description}");
+                }
+            }
+        }
     }
 }

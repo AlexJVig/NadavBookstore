@@ -3,4 +3,5 @@
 var books = Data.GetBooks();
 Legal.FilterByIsraeliLaw(books);
 ArbitraryFilters.ApplyFilters(books);
-Console.WriteLine(books);
+BookPricing.AdjustPricing(books);
+Data.ExportToCsv(books);
