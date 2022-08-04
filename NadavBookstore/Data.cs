@@ -1,5 +1,4 @@
-﻿using System;
-using System.Text.Json;
+﻿using System.Text.Json;
 
 namespace NadavBookstore
 {
@@ -28,10 +27,5 @@ namespace NadavBookstore
             else
                 return new List<Book>();
         }
-
-        public Data()
-        {
-        }
     }
 }
-
